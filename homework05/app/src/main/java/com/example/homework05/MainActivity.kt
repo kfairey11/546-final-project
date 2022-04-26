@@ -21,11 +21,11 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.fragmentHost)
         botnav.setupWithNavController(navController)
 
-    val exampleList = generateData()
+    /*val exampleList = generateData()
     val myRV: RecyclerView = findViewById(R.id.recyclerView)
     myRV.adapter = myAdapter(exampleList)
     myRV.layoutManager = LinearLayoutManager(this)
-    myRV.setHasFixedSize(true)
+    myRV.setHasFixedSize(true)*/
 }
     public fun generateData(): List<MyData> {
         val list = ArrayList<MyData>()

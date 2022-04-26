@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav"
     app:startDestination="@id/listFragment2">
-
     <fragment
         android:id="@+id/listFragment2"
         android:name="com.example.homework05.ListFragment"
