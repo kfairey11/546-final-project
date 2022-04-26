@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/listFragment"
+        android:id="@+id/listFragment2"
         android:icon="@drawable/ic_home"
         android:title="Home"
         app:showAsAction="ifRoom"/>
     <item
-        android:id="@+id/mapFragment"
+        android:id="@+id/mapFragment2"
         android:icon="@drawable/ic_baseline_list_alt_24"
         android:title="Trash"
         app:showAsAction="ifRoom"/>

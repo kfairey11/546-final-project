@@ -2,20 +2,31 @@ package com.example.homework05
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val exampleList = generateData()
-        val myRV: RecyclerView = findViewById(R.id.recyclerView)
-        myRV.adapter = myAdapter(exampleList)
-        myRV.layoutManager = LinearLayoutManager(this)
-        myRV.setHasFixedSize(true)
-    }
+        val listFrag = ListFragment()
+        val mapFrag = MapFragment()
+
+        val botnav: BottomNavigationView = findViewById(R.id.bot_nav)
+        val navController = findNavController(R.id.fragmentHost)
+        botnav.setupWithNavController(navController)
+
+    val exampleList = generateData()
+    val myRV: RecyclerView = findViewById(R.id.recyclerView)
+    myRV.adapter = myAdapter(exampleList)
+    myRV.layoutManager = LinearLayoutManager(this)
+    myRV.setHasFixedSize(true)
+}
     public fun generateData(): List<MyData> {
         val list = ArrayList<MyData>()
         val countryList: List<String> = resources.getStringArray(R.array.country_list).toList()
