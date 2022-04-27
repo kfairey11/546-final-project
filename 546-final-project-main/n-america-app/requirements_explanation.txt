@@ -1,0 +1,14 @@
+Program requirements:
+
+1.	Your program should implement a useful function: This is a application that allows users to see a list of countries and their population; Clicking a country's card will display more information. 
+2.	Your program should be easy to use (usable): we hope it is; although the google map does take a second to load
+
+	Your program should contain:
+3.	At least two activities: Main country list, expanded description of country
+4.	The two activities must transfer information (from at least one to the other): Scrolling view transfers the flag image and population to the expanded view.
+5.	Your program should contain at least two fragments with at least one transition event: List fragment and Map fragment contain left and right animations to travel back and forth.
+6.	Your program should contain a recyclerview: included in listFragment
+7.	Your program should contain either one menu or navigation bar (can have both): navigation bar on bottom of screen
+8.	Your program should follow good programming practices
+9.	The content of the app should exceed the screen size to illustrate scrolling ability: List fragment has scrolling abilities 
+10.	Your program should execute successfully on an Android device. 
