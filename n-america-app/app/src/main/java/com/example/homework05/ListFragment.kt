@@ -40,17 +40,15 @@ class ListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_list, container, false)
+        var myView: View = inflater.inflate(R.layout.fragment_list, container, false)
+        var recyclerView: RecyclerView = myView.findViewById(R.id.recyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(activity)
+        val list = generateData()
+        recyclerView.adapter = myAdapter(list)
+        recyclerView.setHasFixedSize(true)
+        return myView
     }
 
-    override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(itemView, savedInstanceState)
-        recyclerView.apply {
-            var list = generateData()
-            layoutManager = LinearLayoutManager(activity)
-            adapter = myAdapter(list)
-        }
-    }
 
     public fun generateData(): List<MyData> {
         val list = ArrayList<MyData>()
